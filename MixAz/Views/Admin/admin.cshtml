@@ -1,0 +1,18 @@
+﻿
+       @{
+            Layout = "_Layout1";
+        }
+   @model List<Post>
+    <section class="xeberler">
+        <div class="container admin-container">
+        
+          <div class="box d-flex justify-content-between admin-box">
+            
+               @foreach (var item in Model)
+              {
+              
+                @await Html.PartialAsync("_card",item)
+              }
+          </div>
+        </div>
+    </section> 

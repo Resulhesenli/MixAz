@@ -1,0 +1,2646 @@
+﻿*:focus{
+    outline:none!important;
+    outline-color:transparent!important;
+    box-shadow: none!important;
+}
+body {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    background-color: #e7e8ec !important;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+}
+
+    header .icon-nav {
+        background-color: #15567f !important;
+    }
+
+
+    header .esas-nav {
+        background-color: #15567f !important;
+    }
+
+        header .esas-nav .profNav {
+            width: 60%;
+        }
+
+            header .esas-nav .profNav .xeberLogo {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+            }
+
+                header .esas-nav .profNav .xeberLogo .profInp {
+                    padding: 5px;
+                }
+
+            header .esas-nav .profNav .profLogin {
+                width: 30% !important;
+            }
+
+        header .esas-nav .container {
+            font-family: 'Luxurious Roman', cursive;
+            position: relative;
+        }
+
+            header .esas-nav .container .admin-panel {
+                margin-left: 280px;
+            }
+
+            header .esas-nav .container .logo {
+                font-size: 35px !important;
+                padding-right: 25px;
+            }
+
+            header .esas-nav .container #mynavbar ul {
+                padding: 5px 0px 0px 0px !important;
+            }
+
+            header .esas-nav .container .login {
+                width: 25%;
+                margin-top:8px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: center;
+                -ms-flex-pack: center;
+                justify-content: center;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+            }
+
+                header .esas-nav .container .login img {
+                    max-width: 50px;
+                    min-width: 50px;
+                    max-height: 40px;
+                    min-height: 40px;
+                    border-radius: 50%;
+                }
+
+                header .esas-nav .container .login i {
+                    font-size: 35px;
+                    padding-left: 15px;
+                    cursor: pointer;
+                    color: #DFEBED !important;
+                }
+
+            header .esas-nav .container .profMenu {
+                width: 180px;
+                padding: 5px;
+                background-color: #fff;
+                position: absolute;
+                right: -80px;
+                top: 63px;
+                z-index: 999;
+                border-radius: 4px;
+                text-align: start;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.19);
+                box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.19);
+                display: none;
+            }
+
+                header .esas-nav .container .profMenu a {
+                    padding-left: 30px;
+                    text-decoration: none;
+                    color: black;
+                }
+
+                    header .esas-nav .container .profMenu a i {
+                        color: #05466e;
+                    }
+
+            header .esas-nav .container .centrMenu {
+                right: 15px;
+            }
+
+            header .esas-nav .container .search {
+                padding-left: 70px;
+                margin-top: 5px;
+            }
+
+                header .esas-nav .container .search input {
+                    width: 235px;
+                    height: 35px;
+                    margin-top: 5px;
+                }
+
+                header .esas-nav .container .search i {
+                    margin-top: 3px;
+                    font-size: 25px;
+                }
+
+            header .esas-nav .container .giris {
+                padding-left: 33px;
+            }
+
+            header .esas-nav .container ul {
+                width: 528px;
+            }
+
+                header .esas-nav .container ul li a {
+                    -webkit-transition: .5s;
+                    transition: .5s;
+                }
+
+                    header .esas-nav .container ul li a i {
+                        -webkit-transition: .5s;
+                        transition: .5s;
+                    }
+
+                    header .esas-nav .container ul li a:hover {
+                        color: #98FF98 !important;
+                    }
+
+                        header .esas-nav .container ul li a:hover i {
+                            color: #98FF98 !important;
+                        }
+
+            header .esas-nav .container .kate {
+                display: none;
+            }
+
+    header .kateqoriya {
+        background-color: #DFEBED !important;
+        font-family: 'Roboto Mono', monospace;  
+    }
+
+        header .kateqoriya ul li a {
+            font-size: 18px;
+            font-weight: 600;
+            -webkit-transition: .5s;
+            transition: .5s;
+        }
+
+            header .kateqoriya ul li a:hover {
+                color: #1d8cd2 !important;
+            }
+
+            header .kateqoriya ul li a:last-child {
+                padding-left: 20px !important;
+            }
+
+        header .kateqoriya ul li .esas {
+            color: #1d8cd2 !important;
+        }
+
+    header .resNav {
+        display: none;
+    }
+
+    header .axtaris {
+        display: none;
+    }
+
+@media (max-width: 768px) {
+    header .esas-nav .resIstek {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+        justify-content: space-between !important;
+        width: 80% !important;
+    }
+
+        header .esas-nav .resIstek .navbar-toggler {
+            margin-left: 1px;
+        }
+
+    header .esas-nav .container {
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        flex-wrap:nowrap;
+    }
+
+        header .esas-nav .container .logo {
+            font-size: 24px !important;
+            padding-right: 3px;
+        }
+
+        header .esas-nav .container .search {
+            display: none;
+        }
+
+        header .esas-nav .container .login {
+            display: none;
+        }
+
+            header .esas-nav .container .login a {
+                display: none;
+            }
+
+                header .esas-nav .container .login a img {
+                    display: none;
+                }
+
+            header .esas-nav .container .login i {
+                display: none;
+            }
+
+        header .esas-nav .container .profMenu {
+            display: none;
+        }
+
+        header .esas-nav .container .axtaris {
+            display: block;
+            padding-left: 0px;
+        }
+
+            header .esas-nav .container .axtaris input {
+                margin-top: 5px;
+                width: 173px;
+                height: 30px;
+            }
+
+            header .esas-nav .container .axtaris i {
+                margin-top: 4px;
+                font-size: 20px;
+            }
+
+    header #mynavbar {
+        display: none;
+    }
+
+    header .kateqoriya {
+        display: none;
+    }
+
+    header .resNav {
+        display: block;
+        width: 0px;
+        height: 100vh;
+        background-color: #15567f;
+        position: absolute;
+        right: 0px;
+        -webkit-transition: .5s;
+        transition: .5s;
+    }
+
+        header .resNav .container .resProfil {
+            border-bottom: 1px solid silver;
+            padding-bottom: 10px;
+        }
+
+            header .resNav .container .resProfil img {
+                width: 50px;
+                border-radius: 50%;
+            }
+
+            header .resNav .container .resProfil a {
+                color: #fff;
+                text-decoration: none;
+                font-size: 20px;
+            }
+
+        header .resNav .container .resPanel ul {
+            list-style-type: none;
+        }
+
+            header .resNav .container .resPanel ul li {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                justify-content: flex-start;
+                margin-top: 3px;
+                text-align: center;
+                border-bottom: 1px solid silver;
+                padding-bottom: 10px;
+                font-family: 'Luxurious Roman', cursive;
+            }
+
+                header .resNav .container .resPanel ul li a {
+                    text-align: center;
+                    color: #fff;
+                    text-decoration: none;
+                    font-size: 18px;
+                }
+
+                    header .resNav .container .resPanel ul li a i {
+                        font-size: 16px;
+                    }
+
+        header .resNav .container .cixis {
+            margin-top:-60px;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+        }
+        header .resNav .container .notcategory{
+            margin-top:103px;
+        }
+
+        header .resNav .container .cixis a {
+            margin-top: 8px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+    .navRes {
+        width: 60% !important;
+    }
+}
+
+.sidebar {
+    width: 30% !important;
+    position: fixed;
+    right: 20px;
+    top: 150px;
+}
+
+    .sidebar h4 {
+        padding-top: 15px;
+        border-bottom: 2px solid #1d8cd2;
+        padding-bottom: 10px;
+        font-size: 25px;
+        margin-bottom: 20px;
+        font-family: 'Poppins', sans-serif;
+        color: #05466e;
+    }
+
+   
+    .sidebar .same {
+        border: 1px solid silver;
+        border-radius: 4px;
+        background-color: rgba(255, 255, 255, 0.842);
+        padding: 8px 0px 5px 8px;
+        -webkit-box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.19);
+        box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.19);
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: flex-start;
+        max-height:110px;
+        min-height:110px;
+    }
+        .sidebar .same a {
+            min-width: 38%;
+            max-width: 38%;
+        }
+       
+        .sidebar .same img {
+            min-width: 100%;
+            max-width: 100%;
+            max-height: 95px;
+            min-height: 95px;
+        }
+      
+
+        
+        .sidebar .same .boxText {
+            text-align: start;
+            padding-left: 15px;
+        }
+       
+        .sidebar .same a{
+            text-decoration:none;
+            color: #13317F;
+        }
+            .sidebar .same a p {
+                -ms-text-overflow: ellipsis;
+                -o-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                -ms-line-clamp: 3;
+                -webkit-line-clamp: 3;
+                line-clamp: 3;
+                display: -webkit-box;
+                display: box;
+                word-wrap: break-word;
+                -webkit-box-orient: vertical;
+                box-orient: vertical;
+            }
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        display: none;
+    }
+}
+
+.admin-xeber .container {
+    position: relative;
+    left: 50px;
+    bottom: 50px;
+}
+
+@media (max-width: 768px) {
+    .admin-xeber {
+        margin: 110px 0px !important;
+    }
+
+        .admin-xeber .container {
+            left: 0px;
+        }
+
+            .admin-xeber .container .slide .box .card .card-body .card-title {
+                font-size: 16px;
+            }
+
+            .admin-xeber .container .slide .box .card .card-body .like {
+                display: none;
+            }
+
+            .admin-xeber .container .slide .box .card .card-body .redactor {
+                margin-top: 45px !important;
+            }
+
+                .admin-xeber .container .slide .box .card .card-body .redactor a {
+                    margin-left: 5px !important;
+                }
+}
+
+.xeberler {
+    width: 100%;
+    margin: 180px 0px;
+}
+
+    .xeberler .container {
+        width: 65% !important;
+        position: relative;
+        right: 220px;
+    }
+    .xeberler .admin-container {
+        position: relative;
+        right: 0px!important;
+    }
+
+        .xeberler .container .slide {
+            width: 100%;
+            height: 400px !important;
+            z-index: 0;
+        }
+
+            .xeberler .container .slide .carousel-item .sld {
+                height: 400px !important;
+                border-radius: 12px;
+                border: 2px solid #1d8cd2;
+                position: relative;
+            }
+
+            .xeberler .container .slide .carousel-item .slideYazi a{
+                width: 100%;
+                height: 80px;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background-color: #05466e;
+                z-index: 1;
+                padding: 10px 25px;
+                color: #fff;
+                border-radius: 0px 0px 12px 12px;
+                text-decoration:none;
+            }
+
+                .xeberler .container .slide .carousel-item .slideYazi h4 {
+                    font-size: 18px;
+                    line-height: 1.8;
+                }
+
+                .xeberler .container .slide .carousel-item .slideYazi .red {
+                    display: none;
+                    top: -310px;
+                    right: 10px;
+                    position: absolute;
+                }
+
+                    .xeberler .container .slide .carousel-item .slideYazi .red a {
+                        margin-left: 15px;
+                        font-size: 20px;
+                    }
+
+                        .xeberler .container .slide .carousel-item .slideYazi .red a i {
+                            color: rgba(0, 0, 0, 0.8);
+                        }
+
+            .xeberler .container .slide .slide:hover .red {
+                display: block;
+            }
+
+        .xeberler .container .box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-pack: distribute;
+            justify-content: flex-start;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding-bottom: 60px;
+        }
+
+            .xeberler .container .box .row{
+                
+            }
+
+            .xeberler .container .box .card {
+                border: 2px solid #1d8cd2;
+                width: 31%;
+                min-height: 425px;
+                max-height: 425px;
+                cursor: pointer;
+                position: relative;
+                background-color: #f8f8f8;
+                -webkit-transition: .3s;
+                transition: .3s;
+               
+            }
+               /* .xeberler .container .box .card:not(:nth-child(3n+1)) {
+                    margin-left: 30px;
+                }*/
+
+
+                .xeberler .container .box .card img {
+                    max-height: 220px!important;
+                    min-height: 220px!important;
+                }
+
+                .xeberler .container .box .card .tarix {
+                    width: 45px;
+                    height: 110px;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding-top: 5px;
+                    border-left: 24px solid #15567f;
+                    border-right: 24px solid #15567f;
+                    border-bottom: 25px solid transparent;
+                }
+
+                .xeberler .container .box .card .ay {
+                    width: 50px;
+                    position: absolute;
+                    top: 6px;
+                    right: 0;
+                }
+
+                    .xeberler .container .box .card .ay h4 {
+                        font-size: 14px;
+                        color: #fff;
+                        display: inline;
+                    }
+
+                    .xeberler .container .box .card .ay span {
+                        color: #fff !important;
+                    }
+
+                .xeberler .container .box .card .like {
+                    width: 100% !important;
+                    height: 30px !important;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                    justify-content: space-between;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    position: relative;
+                    top: 50px;
+                }
+
+                    .xeberler .container .box .card .like a {
+                        background: transparent;
+                        border: none;
+                        font-size: 18px;
+                    }
+
+                .xeberler .container .box .card .redactor {
+                    width: 100% !important;
+                    height: 80px;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    margin-top: 40px;
+                }
+
+                    .xeberler .container .box .card .redactor a {
+                        width: 70px !important;
+                        border-radius: 5px;
+                        font-size: 14px;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -ms-flex-pack: distribute;
+                        justify-content: space-around;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                    }
+
+                        .xeberler .container .box .card .redactor a i {
+                            color: #fff !important;
+                        }
+
+                        .xeberler .container .box .card .card-body {
+                            min-height: 180px;
+                           
+                        }
+
+                    .xeberler .container .box .card .card-body h4 {
+                        font-size: 18px;
+                        line-height: 1.4;
+                        height: 42px;
+                        color: #13317F;
+                       
+                    }
+
+                    .xeberler .container .box .card .card-body a {
+                        margin-left: 5px;
+                        margin-top: 55px;
+                        text-decoration:none;
+                    }
+
+                        .xeberler .container .box .card .card-body a i {
+                            color: #15567f;
+                        }
+
+                    .xeberler .container .box .card .card-body .davam {
+                        margin-left: 75px;
+                    }
+                    .xeberler .container .box .card .card-body .like .comment a{
+                        border:none;
+                        outline:none;
+                        outline-color:none;
+                        background-color:none;
+                    }
+
+                    .xeberler .container .box .card:hover {
+                        -webkit-transform: translateY(-6px);
+                        transform: translateY(-6px);
+                        -webkit-box-shadow: 0 3px 18px rgba(27, 27, 27, 0.5);
+                        box-shadow: 0 3px 18px rgba(27, 27, 27, 0.5);
+                        -webkit-transition: .3s;
+                        transition: .3s;
+                    }
+
+@media (max-width: 768px) {
+    .xeberler {
+        margin: 110px 0px 0px 0px;
+    }
+
+        .xeberler .container {
+            width: 95% !important;
+            right: 0px !important;
+        }
+            .xeberler .container .box .card {
+                margin-left: 0px!important;
+            }
+
+            .xeberler .container .admin-box{
+                margin:auto;
+                width:80%;
+            }
+            .xeberler .container .slide {
+                height: 255px !important;
+            }
+
+                .xeberler .container .slide .carousel-inner .carousel-item {
+                    width: 95% !important;
+                    margin-left: 10px;
+                }
+
+                    .xeberler .container .slide .carousel-inner .carousel-item img {
+                        height: 303px !important;
+                    }
+
+                    .xeberler .container .slide .carousel-inner .carousel-item .slideYazi {
+                        font-size: 13px;
+                        line-height: 1.6;
+                    }
+
+                .xeberler .container .slide .ireli {
+                    height: 223px !important;
+                }
+
+                    .xeberler .container .slide .ireli span {
+                        margin-top: 6rem !important;
+                    }
+
+                .xeberler .container .slide .box .card {
+                    width: 337px !important;
+                    left: 10px;
+                    top: 20px;
+                }
+
+                    .xeberler .container .slide .box .card .card-body .like {
+                        width: 100% !important;
+                        margin-left: -5px;
+                    }
+
+                        .xeberler .container .slide .box .card .card-body .like .comment a {
+                            margin-top: 50px;
+                            margin-left: 15px;
+                            margin-top: 50px;
+                            font-size: 23px;
+                        }
+
+                        .xeberler .container .slide .box .card .card-body .like .baxis a {
+                            margin-top: 50px;
+                            font-size: 23px;
+                        }
+
+                    .xeberler .container .slide .box .card .card-body .redactor {
+                        margin-left: 10px;
+                    }
+}
+
+.registration {
+    width: 100%;
+    height: 90vh;
+    margin: 100px auto !important;
+}
+
+    .registration .sayt {
+        width: 250px;
+        position: relative;
+        left: 80px;
+        top: 100px;
+        -webkit-box-shadow: 0 4px 200px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        box-shadow: 0 4px 200px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+        .registration .sayt img {
+            border-radius: 12px;
+        }
+
+    .registration .telefon {
+        width: 400px;
+        position: absolute;
+        left: 110px;
+        top: 165px;
+    }
+
+    .registration .saytIki {
+        width: 250px;
+        position: absolute;
+        left: 600px;
+        top: 230px;
+    }
+
+        .registration .saytIki img {
+            border-radius: 12px;
+        }
+
+    .registration .telefonIki {
+        width: 410px;
+        position: absolute;
+        left: 548px;
+        top: 210px;
+    }
+
+@media (max-width: 768px) {
+    .registration .container {
+        display: none;
+    }
+
+    #enter {
+        width: 97% !important;
+        right: 7px !important;
+    }
+
+        #enter .container .giris .user {
+            left: 10px;
+            top: 50px;
+        }
+
+        #enter .container .giris .password {
+            left: 10px;
+            top: 104px;
+        }
+
+        #enter .container .giris i {
+            right: 7px !important;
+        }
+
+    #registr {
+        width: 100% !important;
+        right: 0px !important;
+        text-transform:capitalize;
+    }
+
+        #registr .container .qeyd i {
+            right: 13px !important;
+        }
+}
+
+#registr {
+    width: 26%;
+    border: 1px solid silver;
+    padding: 30px;
+    border-radius: 12px;
+    position: absolute;
+    right: 120px;
+    top: 120px;
+    border: 2px solid #15567f;
+    display: none;
+}
+
+    #registr .container {
+        line-height: 1.8;
+    }
+
+        #registr .container h4 {
+            color: #05466e;
+        }
+
+        #registr .container .qeyd {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            position: relative;
+        }
+
+            #registr .container .qeyd input {
+                width: 300px;
+                padding: 5px 0px 5px 20px;
+                margin: 10px 0px;
+                border-radius: 4px;
+                border: none;
+                outline: none;
+            }
+            #registr .container .qeyd select {
+                width:98%;
+                padding: 5px 0px 5px 20px;
+                margin: 5px 0px;
+            }
+
+            #registr .container .qeyd button {
+                border-radius: 8px;
+                color: #fff;
+                background-color: #05466e;
+                font-weight: 500;
+            }
+
+            #registr .container .qeyd i {
+                cursor: pointer;
+            }
+
+            #registr .container .qeyd #bagli {
+                position: absolute;
+                right: 3px;
+                bottom: 185px;
+                display: block;
+            }
+
+            #registr .container .qeyd #aciq {
+                position: absolute;
+                right: 3px;
+                bottom: 185px;
+                display: none;
+            }
+
+            #registr .container .qeyd p {
+                font-size: 14px;
+                margin-top: 20px;
+            }
+
+            #registr .container .qeyd a {
+                text-decoration: none;
+            }
+
+                #registr .container .qeyd a:hover {
+                    text-decoration: underline;
+                }
+
+#enter {
+    width: 27%;
+    border: 1px solid silver;
+    padding: 30px;
+    border-radius: 12px;
+    position: absolute;
+    right: 100px;
+    top: 180px;
+    border: 2px solid #15567f;
+}
+
+    #enter .giris {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        position: relative;
+    }
+
+        #enter .giris h4 {
+            color: #05466e;
+        }
+
+        #enter .giris input {
+            width: 330px;
+            padding: 5px 0px 5px 60px;
+            margin: 10px 0px;
+            border-radius: 4px;
+            border: none;
+            outline: none;
+        }
+
+        #enter .giris button {
+            border-radius: 4px;
+            color: #fff;
+            background-color: #05466e;
+            font-weight: 500;
+            padding: 5px 15px;
+        }
+
+        #enter .giris p {
+            font-size: 14px;
+            margin-top: 20px;
+        }
+
+        #enter .giris .user {
+            position: absolute;
+            left: 5px;
+            top: 53px;
+        }
+
+        #enter .giris .password {
+            position: absolute;
+            left: 5px;
+            top: 106px;
+        }
+
+        #enter .giris #bagliEnter {
+            position: absolute;
+            right: 3px;
+            bottom: 150px;
+            cursor: pointer;
+        }
+
+        #enter .giris #aciqEnter {
+            position: absolute;
+            right: 3px;
+            bottom: 150px;
+            cursor: pointer;
+            display: none;
+        }
+
+        #enter .giris a {
+            font-size: 14px;
+            text-decoration: none;
+        }
+
+            #enter .giris a:hover {
+                text-decoration: underline;
+            }
+
+.xeber {
+    margin: 200px auto;
+}
+
+    .xeber .container {
+        position: relative;
+        right: 200px;
+    }
+
+        .xeber .container .xeberImg {
+            margin: 50px auto;
+            background-color: #f8f5f5;
+            border-radius: 4px;
+            width: 800px;
+            position: relative;
+        }
+
+            .xeber .container .xeberImg .comment {
+                margin: 35px 0px 15px 90px;
+                width:76%;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+
+                .xeber .container .xeberImg .comment .myimg {
+                    min-width: 50px;
+                    max-width: 50px;
+                    max-height: 40px;
+                    min-height: 40px;
+                    border-radius: 50%;
+                    margin: 0px 10px 8px 0px;
+                }
+                .xeber .container .xeberImg .comment .userimg {
+                    max-height: 50px;
+                    min-height: 50px;
+                }
+                .xeber .container .xeberImg .comment form {
+                    display: flex;
+                    height: 38px;
+                }
+                .xeber .container .xeberImg .comment form button{
+                    background-color:transparent;
+                    border:none;
+                    margin-top:2px;
+                }
+
+                .xeber .container .xeberImg .comment input {
+                    border: 2px solid #d3d9de;
+                    width: 530px;
+                    border-radius: 8px;
+                    padding: 2px 0px 2px 15px;
+                    outline: none;
+                }
+
+                .xeber .container .xeberImg .comment .send {
+                    color: #15567f;
+                    font-size: 32px;
+                    padding: 0px 0px 8px 8px;
+                    vertical-align: middle;
+                    cursor: pointer;
+                }
+
+            .xeber .container .xeberImg .allComment {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                position: relative;
+            }
+
+                .xeber .container .xeberImg .allComment .userComment {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                    justify-content: space-between;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    border-top: 1px solid #d3d9de;
+                }
+
+                    .xeber .container .xeberImg .allComment .userComment img {
+                        max-width: 50px;
+                        min-width: 50px;
+                        max-height: 50px;
+                        min-height: 50px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 5px;
+                    }
+
+                    .xeber .container .xeberImg .allComment .userComment .user-comment {
+                        width: 510px;
+                        border-radius: 20px;
+                        position: relative;
+                        right: 50px;
+                    }
+                    .xeber .container .xeberImg .allComment .userComment .user-comment a{
+                        text-decoration:none;
+                        color:#13317F;
+                    }
+
+                        .xeber .container .xeberImg .allComment .userComment .user-comment .userPhoto {
+                            width: 50px;
+                            position: relative;
+                            bottom: 40px;
+                        }
+
+                        .xeber .container .xeberImg .allComment .userComment .user-comment h6 {
+                            padding: 10px 0px 0px 15px;
+                        }
+
+                        .xeber .container .xeberImg .allComment .userComment .user-comment p {
+                            width: 480px;
+                            padding: 0px 8px 0px 15px;
+                        }
+
+                    .xeber .container .xeberImg .allComment .userComment .del {
+                        position: absolute;
+                        right: 13px;
+                        top: 2px;
+                        cursor: pointer;
+                        font-size: 18px;
+                        display: none;
+                    }
+
+                    .xeber .container .xeberImg .allComment .userComment:hover .del {
+                        display: block;
+                    }
+
+                .xeber .container .xeberImg .allComment .likeSay {
+                    width: 7%;
+                    position: absolute;
+                    right: -15px;
+                    bottom: -20px;
+                    cursor: pointer;
+                }
+
+            .xeber .container .xeberImg .postImg {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-pack: start;
+                -ms-flex-pack: start;
+                justify-content: start;
+                -webkit-box-align: center;
+                -ms-flex-align: center;
+                align-items: center;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+            }
+            
+            
+
+                .xeber .container .xeberImg  .beyenme {
+                    width: 80%;
+                    height: 40px;
+                    margin: auto;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-pack: justify;
+                    -ms-flex-pack: justify;
+                    justify-content: space-between;
+                }
+
+                    .xeber .container .xeberImg  .beyenme .solHisse {
+                        padding: 5px;
+                        font-size: 18px;
+                    }
+
+                        .xeber .container .xeberImg  .beyenme .solHisse a {
+                            cursor: pointer;
+                            padding: 4px 10px;
+                            margin-right: 10px;
+                            text-decoration: none;
+                            background-color: #DFEBED;
+                            border-radius: 20px;
+                            color: #4a4a4a;
+                        }
+                        .xeber .container .xeberImg  .beyenme .solHisse a:last-child{
+                                vertical-align: sub;
+                        }
+
+                    .xeber .container .xeberImg  .beyenme .sagHisse {
+                        padding: 5px;
+                        font-size: 18px;
+                    }
+
+                        .xeber .container .xeberImg  .beyenme .sagHisse a {
+                            color: #4a4a4a;
+                            cursor: pointer;
+                            padding: 4px 14px;
+                        }
+
+                .xeber .container .xeberImg .postImg .img {
+                    width: 24%;
+                    height: 150px;
+                    cursor: pointer;
+                    margin: 5px 5px 5px 0px;
+                    border-radius: 4px;
+                    padding: 3px;
+                }
+               .profil .container .profContact .container .bodyText #esasImg{
+                   max-width:560px;
+                   min-width:560px;
+               }
+
+                .profil .container .profContact .container .bodyText .postImg .img {
+                    max-width: 31%;
+                    min-width: 31%;
+                    max-height: 100px;
+                    min-height: 100px;
+                    cursor: pointer;
+                    margin: 1px 0px 5px 6px;
+                    border-radius: 4px;
+                    padding: 3px;
+                }
+
+                .xeber .container .xeberImg  .postText {
+                    width: 80%;
+                    margin: 50px auto 10px auto;
+                }
+
+                    .xeber .container .xeberImg .postText h2 {
+                        margin-bottom: 25px;
+                        color: #13317F!important;
+                    }
+
+                    .xeber .container .xeberImg  .postText p {
+                        font-size: 18px;
+                        text-align: start;
+                    }
+
+
+            .xeber .container .xeberImg #esasImg {
+                width: 100%;
+                height: 400px;
+            }
+
+            .xeber .container .xeberImg #right {
+                right: 25px;
+                position: absolute;
+                font-size: 50px;
+                top: 180px;
+            }
+
+            .xeber .container .xeberImg #left {
+                left: 25px;
+                position: absolute;
+                font-size: 50px;
+                top: 180px;
+            }
+
+@media (max-width: 768px) {
+    .xeber {
+        margin: 95px auto;
+    }
+
+        .xeber .container {
+            right: 0px;
+            width: 100%;
+            margin-top: 40px;
+            padding-bottom: 10px;
+        }
+
+            .xeber .container .xeberImg {
+                width: 100% !important;
+            }
+                .xeber .container .xeberImg .comment {
+                    margin: 35px 0px 15px 20px;
+                    width: 90%;
+                }
+                .xeber .container .xeberImg .comment input{
+                    width:225px;
+                }
+                .xeber .container .xeberImg .allComment .userComment .user-comment{
+                    width:240px;
+                }
+                .xeber .container .xeberImg .allComment .userComment .user-comment p {
+                    width:300px;
+                }
+                .xeber .container .xeberImg .first {
+                    width: 100%;
+                    height: 225px !important;
+                }
+
+                .xeber .container .xeberImg i {
+                    top: 90px !important;
+                }
+
+            .xeber .container .postImg .second {
+                width: 48% !important;
+            }
+
+            .xeber .container .postImg .comment {
+                width: 100%;
+                margin: 35px 0px 15px 0px;
+                padding-left: 15px;
+            }
+
+                .xeber .container .postImg .comment .myComment img {
+                    width: 38px;
+                }
+
+                .xeber .container .postImg .comment .myComment input {
+                    width: 263px;
+                    padding: 3px 0px 3px 15px;
+                }
+
+                .xeber .container .postImg .comment .myComment i {
+                    font-size: 28px;
+                }
+
+                .xeber .container .postImg .comment .allComment .userPhoto {
+                    width: 10px;
+                }
+
+                    .xeber .container .postImg .comment .allComment .userPhoto img {
+                        width: 40px;
+                        border-radius: 50%;
+                        position: absolute;
+                        top: 5px;
+                    }
+
+                .xeber .container .postImg .comment .allComment .user-comment {
+                    width: 215px;
+                    right: 110px;
+                }
+
+                    .xeber .container .postImg .comment .allComment .user-comment p {
+                        width: 294px;
+                        font-size: 12px;
+                    }
+
+                .xeber .container .postImg .comment .allComment .likeSay {
+                    right: 10px;
+                    bottom: -30px;
+                }
+
+            .xeber .container .postImg .beyenme {
+                width: 87% !important;
+            }
+
+                .xeber .container .postImg .beyenme .solHisse {
+                    font-size: 14px !important;
+                }
+
+                .xeber .container .postImg .beyenme .sagHisse {
+                    font-size: 14px !important;
+                }
+
+            .xeber .container .postImg .postText {
+                width: 90% !important;
+            }
+
+                .xeber .container .postImg .postText h2 {
+                    text-align: center;
+                    font-size: 20px;
+                }
+
+                .xeber .container .postImg .postText p {
+                    font-size: 15px !important;
+                }
+}
+
+.profil {
+    margin: 100px auto;
+}
+
+    .profil .container {
+        width: 73%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+        .profil .container .profImg {
+            width: 300px;
+            min-height: 500px;
+            max-height: 600px;
+            background-color: #ffff;
+            text-align: center;
+            padding-top: 15px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 100px;
+        }
+
+            .profil .container .profImg h4 {
+                width: 80%;
+                margin: 10px auto;
+                text-align: center;
+                padding: 5px 0px 5px 16px;
+                color: #05466e;
+                border-bottom: 2px solid #1d8cd2;
+                border-top: 2px solid #1d8cd2;
+            }
+
+            .profil .container .profImg img {
+                width: 90%;
+                border-radius: 2px;
+                margin: auto;
+            }
+
+            .profil .container .profImg button {
+                width: 80%;
+                background-color: #05466e;
+                color: #fff;
+                -webkit-transition: .3s;
+                transition: .3s;
+                font-size: 14px;
+            }
+
+            .profil .container .profImg .legv {
+                background-color: #e5ebf1;
+                color: #05466e;
+                font-weight: 700;
+                display: none;
+            }
+
+            .profil .container .profImg .dost {
+                font-weight: 500;
+            }
+
+            .profil .container .profImg .share {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: distribute;
+                justify-content: space-around;
+                color: #05466e;
+            }
+
+                .profil .container .profImg .share a {
+                    text-decoration: none;
+                    color: #05466e;
+                }
+
+            .profil .container .profImg .friends {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: distribute;
+                justify-content: space-around;
+                color: #05466e;
+            }
+
+                .profil .container .profImg .friends a {
+                    text-decoration: none;
+                    color: #05466e;
+                }
+
+            .profil .container .profImg .friendsend {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: distribute;
+                justify-content: space-around;
+                color: #05466e;
+            }
+
+                .profil .container .profImg .friendsend a {
+                    text-decoration: none;
+                    color: #05466e;
+                }
+
+        .profil .container .profContact {
+            width: 68%;
+            border-radius: 4px;
+        }
+
+            .profil .container .profContact .container {
+                width: 100%;
+                padding-top: 3px;
+                position: relative;
+                border-radius: 4px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+
+                .profil .container .profContact .container .profShare {
+                    width: 90%;
+                    background-color: #fff;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -ms-flex-pack: distribute;
+                    justify-content: space-around;
+                    -webkit-box-align: center;
+                    -ms-flex-align: center;
+                    align-items: center;
+                    padding: 8px;
+                    border-radius: 4px;
+                }
+
+                    .profil .container .profContact .container .profShare .imgpublic {
+                        max-width: 40px;
+                        min-width: 40px;
+                        max-height: 40px;
+                        min-height: 40px;
+                        border-radius: 50%;
+                    }
+
+                    .profil .container .profContact .container .profShare .lock {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                    }
+
+                        .profil .container .profContact .container .profShare .lock i {
+                            cursor: pointer;
+                            color: #c6c6c6;
+                        }
+                    .profil .container .profContact .container .profShare form{
+                        width:75%;
+                    }
+                   
+                    .profil .container .profContact .container .profShare form #ProfilPostPhotoUrl{
+                        width:0px;
+                    }
+                    .profil .container .profContact .container .profShare input {
+                        width: 100%;
+                        border: none;
+                        outline: none;
+                        overflow-wrap:break-word;
+                    }
+
+                .profil .container .profContact .container .profBody {
+                    width: 90%;
+                    background-color: #ffff;
+                    margin-top: 12px;
+                    border-radius: 4px;
+                }
+
+                    .profil .container .profContact .container .profBody .profShare {
+                        width: 95%;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        padding: 0px;
+                    }
+
+                        .profil .container .profContact .container .profBody .profShare .nameDate {
+                            margin-left: 10px;
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
+                        }
+
+                            .profil .container .profContact .container .profBody .profShare .nameDate img {
+                                max-width: 60px;
+                                min-width: 60px;
+                                max-height: 60px;
+                                min-height: 60px;
+                                border-radius: 50%;
+                            }
+
+                            .profil .container .profContact .container .profBody .profShare .nameDate .postimg {
+                                width: 60px;
+                                height: 50px;
+                                padding: 2px;
+                                margin-top: 5px;
+                            }
+
+                            .profil .container .profContact .container .profBody .profShare .nameDate .date {
+                                padding: 10px 0px 0px 10px;
+                            }
+
+                                .profil .container .profContact .container .profBody .profShare .nameDate .date p {
+                                    color: #707070;
+                                }
+
+                        .profil .container .profContact .container .profBody .profShare i {
+                            cursor: pointer;
+                            font-size: 22px;
+                            color: #707070;
+                        }
+
+                .profil .container .profContact .container .bodyText {
+                    width: 90%;
+                    margin: auto;
+                }
+
+                    .profil .container .profContact .container .bodyText img {
+                        width: 510px;
+                        height: 400px;
+                        margin-bottom: 15px;
+                    }
+
+                    .profil .container .profContact .container .bodyText .bodyLike {
+                        width: 100%;
+                        height: 40px;
+                        margin: auto;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                    }
+
+                        .profil .container .profContact .container .bodyText .bodyLike .solHisse {
+                            padding: 5px;
+                            font-size: 18px;
+                        }
+
+                            .profil .container .profContact .container .bodyText .bodyLike .solHisse a {
+                                cursor: pointer;
+                                padding: 4px 10px;
+                                margin-right: 10px;
+                                text-decoration: none;
+                                background-color: #DFEBED;
+                                border-radius: 20px;
+                                color: #4a4a4a;
+                            }
+
+                        .profil .container .profContact .container .bodyText .bodyLike .sagHisse {
+                            padding: 5px;
+                            font-size: 18px;
+                            margin-right: 30px;
+                        }
+
+                            .profil .container .profContact .container .bodyText .bodyLike .sagHisse a {
+                                color: #4a4a4a;
+                                cursor: pointer;
+                                padding: 4px 14px;
+                            }
+
+                .profil .container .profContact .container .comment {
+                    width: 100%;
+                    margin: 35px 0px 15px 0px;
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                }
+
+                    .profil .container .profContact .container .comment img {
+                        width: 50px;
+                        max-height:50px;
+                        border-radius: 50%;
+                        margin: 0px 10px 8px 0px;
+                    }
+                    .profil .container .profContact .container .comment form{
+                        margin-top:6px;
+                    }
+
+                    .profil .container .profContact .container .comment input {
+                        border: 2px solid #d3d9de;
+                        width: 498px;
+                        border-radius: 8px;
+                        padding: 5px 0px 5px 15px;
+                        outline: none;
+                    }
+                    .profil .container .profContact .container .comment button {
+                        background-color: transparent;
+                        border: none;
+                    }
+
+                    .profil .container .profContact .container .comment .send {
+                        color: #15567f;
+                        font-size: 32px;
+                        padding: 0px 0px 8px 8px;
+                        vertical-align: middle;
+                        cursor: pointer;
+                    }
+
+                .profil .container .profContact .container .allComment {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                    position: relative;
+                    width: 95%;
+                }
+
+                    .profil .container .profContact .container .allComment .userComment {
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-pack: justify;
+                        -ms-flex-pack: justify;
+                        justify-content: space-between;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        border-top: 1px solid #d3d9de;
+                    }
+
+                        .profil .container .profContact .container .allComment .userComment img {
+                            width: 50px;
+                            border-radius: 50%;
+                            position: absolute;
+                            top: 5px;
+                        }
+
+                        .profil .container .profContact .container .allComment .userComment .user-comment {
+                            width: 490px;
+                            border-radius: 20px;
+                            position: relative;
+                            right: 50px;
+                        }
+                            .profil .container .profContact .container .allComment .userComment .user-comment a{
+                                text-decoration:none;
+                                color:black;
+                            }
+
+                            .profil .container .profContact .container .allComment .userComment .user-comment .userPhoto {
+                                width: 50px;
+                                position: relative;
+                                bottom: 40px;
+                            }
+
+                            .profil .container .profContact .container .allComment .userComment .user-comment h6 {
+                                padding: 10px 0px 0px 15px;
+                            }
+
+                            .profil .container .profContact .container .allComment .userComment .user-comment p {
+                                width: 480px;
+                                padding: 0px 8px 0px 15px;
+                            }
+
+                        .profil .container .profContact .container .allComment .userComment .del {
+                            position: absolute;
+                            right: 13px;
+                            top: 2px;
+                            cursor: pointer;
+                            font-size: 18px;
+                            display: none;
+                        }
+
+                        .profil .container .profContact .container .allComment .userComment:hover .del {
+                            display: block;
+                        }
+
+                    .profil .container .profContact .container .allComment .likeSay {
+                        width: 7%;
+                        position: absolute;
+                        right: -15px;
+                        bottom: -20px;
+                        cursor: pointer;
+                    }
+
+    .profil .melumatlarim {
+        width: 90%;
+        background-color: #ffff;
+        margin-top: 12px;
+        border-radius: 4px;
+    }
+
+        .profil .melumatlarim h3 {
+            text-align: center;
+            padding: 8px;
+            color: #05466e;
+        }
+
+        .profil .melumatlarim form {
+            margin: 8px auto;
+            width: 60%;
+        }
+
+            .profil .melumatlarim form button {
+                width: 100%;
+            }
+
+            .profil .melumatlarim form label {
+                padding-bottom: 3px;
+                font-weight: 500;
+            }
+
+    .profil .shifre {
+        width: 90%;
+        background-color: #ffff;
+        margin-top: 12px;
+        border-radius: 4px;
+        margin: auto;
+        padding-bottom: 12px;
+        display: none;
+    }
+
+        .profil .shifre h3 {
+            text-align: center;
+            padding: 8px;
+            color: #05466e;
+        }
+
+        .profil .shifre form {
+            margin: 8px auto;
+            width: 60%;
+        }
+
+            .profil .shifre form button {
+                width: 100%;
+            }
+
+            .profil .shifre form label {
+                padding-bottom: 3px;
+                font-weight: 500;
+            }
+
+.resProfil {
+    margin: 100px auto;
+}
+
+    .resProfil .container {
+        width: 73%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-pack: distribute;
+        justify-content: space-around;
+    }
+
+        .resProfil .container .profImg {
+            width: 300px;
+            max-height: 520px;
+            background-color: #ffff;
+            text-align: center;
+            padding-top: 15px;
+            position: -webkit-sticky;
+            position: sticky;
+            top: 100px;
+        }
+
+        .resProfil .container .profImg h4 {
+            width: 80%;
+            margin: 10px auto;
+            text-align: center;
+            padding: 5px 0px 5px 16px;
+            color: #05466e;
+            border-bottom: 2px solid #1d8cd2;
+            border-top: 2px solid #1d8cd2;
+        }
+
+            .resProfil .container .profImg img {
+                width: 90%;
+                max-height: 254px;
+                min-height: 254px;
+                border-radius: 2px;
+                margin: auto;
+            }
+            .resProfil .container .profImg button {
+                width: 80%;
+                background-color: #05466e;
+                color: #fff;
+                -webkit-transition: .3s;
+                transition: .3s;
+                font-size: 14px;
+            }
+
+            .resProfil .container .profImg .legv {
+                background-color: #e5ebf1;
+                color: #05466e;
+                font-weight: 700;
+                display: none;
+            }
+
+            .resProfil .container .profImg .dost {
+                font-weight: 500;
+            }
+
+            .resProfil .container .profImg .share {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: distribute;
+                justify-content: space-around;
+                color: #05466e;
+            }
+
+                .resProfil .container .profImg .share a {
+                    text-decoration: none;
+                    color: #05466e;
+                }
+
+            .resProfil .container .profImg .friends {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: distribute;
+                justify-content: space-around;
+                color: #05466e;
+            }
+
+                .resProfil .container .profImg .friends a {
+                    text-decoration: none;
+                    color: #05466e;
+                }
+
+            .resProfil .container .profImg .friendsend {
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-pack: distribute;
+                justify-content: space-around;
+                color: #05466e;
+            }
+
+                .resProfil .container .profImg .friendsend a {
+                    text-decoration: none;
+                    color: #05466e;
+                }
+
+        .resProfil .container .profContact {
+            width: 68%;
+            border-radius: 4px;
+        }
+
+            .resProfil .container .profContact .container {
+                width: 100%;
+                padding-top: 3px;
+                position: relative;
+                border-radius: 4px;
+                display: -webkit-box;
+                display: -ms-flexbox;
+                display: flex;
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+            }
+            .resProfil .container .profContact .container .notposts{
+                text-align:center;
+                font-size:30px;
+                margin-top:250px;
+            }
+
+    .resProfil .melumatlarim {
+        width: 90%;
+        background-color: #ffff;
+        margin-top: 12px;
+        border-radius: 4px;
+    }
+
+        .resProfil .melumatlarim h3 {
+            text-align: center;
+            padding: 8px;
+            color: #05466e;
+        }
+
+        .resProfil .melumatlarim form {
+            margin: 8px auto;
+            width: 60%;
+        }
+
+            .resProfil .melumatlarim form button {
+                width: 100%;
+            }
+
+            .resProfil .melumatlarim form label {
+                padding-bottom: 3px;
+                font-weight: 500;
+            }
+
+    .resProfil .shifre {
+        width: 90%;
+        background-color: #ffff;
+        margin-top: 12px;
+        border-radius: 4px;
+        margin: auto;
+        padding-bottom: 12px;
+        display: none;
+    }
+
+        .resProfil .shifre h3 {
+            text-align: center;
+            padding: 8px;
+            color: #05466e;
+        }
+
+        .resProfil .shifre form {
+            margin: 8px auto;
+            width: 60%;
+        }
+
+            .resProfil .shifre form button {
+                width: 100%;
+            }
+
+            .resProfil .shifre form label {
+                padding-bottom: 3px;
+                font-weight: 500;
+            }
+
+@media (max-width: 768px) {
+    .resProfil {
+        margin: 0px;
+    }
+
+        .resProfil .container {
+            width: 100%;
+            margin-top: 40px;
+            padding-bottom: 10px;
+        }
+
+            .resProfil .container .profImg {
+                display: none;
+            }
+
+            .resProfil .container .profContact {
+                width: 100%;
+            }
+
+                .resProfil .container .profContact .container .melumatlarim {
+                    width: 100%;
+                }
+
+                    .resProfil .container .profContact .container .melumatlarim .container .myInfo form {
+                        width: 100%;
+                    }
+
+            .resProfil .container .shifre form {
+                width: 100%;
+            }
+}
+
+@media (max-width: 768px) {
+    .profil .container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+
+        .profil .container .profImg {
+            width: 93%;
+            height: 250px;
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            position: static;
+            margin-bottom: -32px;
+            margin-top: 55px;
+            border-radius: 4px;
+        }
+
+            .profil .container .profImg img {
+                width: 187px;
+                padding-left: 11px;
+            }
+
+            .profil .container .profImg .profInfo {
+                width: 170px;
+            }
+
+                .profil .container .profImg .profInfo h4 {
+                    font-size: 14px;
+                    padding: 5px 0px 5px 0px;
+                }
+
+                .profil .container .profImg .profInfo button {
+                    width: 80%;
+                    font-size: 12px;
+                }
+
+                    .profil .container .profImg .profInfo button i {
+                        font-size: 10px;
+                    }
+
+                .profil .container .profImg .profInfo div a {
+                    font-size: 14px;
+                }
+
+        .profil .container .profContact .container .profShare {
+            width: 100%;
+        }
+
+            .profil .container .profContact .container .profShare input {
+                width: 65%;
+            }
+
+        .profil .container .profContact .container .profBody {
+            width: 100%;
+        }
+
+            .profil .container .profContact .container .profBody .container .profShare .nameDate img {
+                width: 60px !important;
+                height: 60px !important;
+                padding-left: 0px;
+                margin-top: 8px;
+            }
+
+            .profil .container .profContact .container .profBody .container .profShare i {
+                padding-bottom: 36px;
+            }
+
+            .profil .container .profContact .container .profBody .container .bodyText p {
+                font-size: 20px;
+            }
+
+           /* .profil .container .profContact .container .profBody .container .bodyText img {
+                width: 301px;
+                height: 270px;
+            }*/
+            .profil .container .profContact .container .bodyText #esasImg{
+                max-width:301px;
+                min-width:301px;
+            }
+
+            .profil .container .profContact .container .profBody .container .bodyText .bodyLike .solHisse {
+                font-size: 14px;
+            }
+
+            .profil .container .profContact .container .profBody .container .bodyText .bodyLike .sagHisse {
+                font-size: 14px;
+                margin-right: 0px;
+            }
+
+            .profil .container .profContact .container .profBody .container .comment .myComment img {
+                max-width: 48px;
+                min-width:48px;
+                max-height:48px;
+                min-height:48px;
+            }
+
+            .profil .container .profContact .container .profBody .container .comment .myComment input {
+                width: 213px;
+                padding: 3px 0px 3px 15px;
+            }
+
+            .profil .container .profContact .container .profBody .container .comment .myComment i {
+                font-size: 28px;
+            }
+
+            .profil .container .profContact .container .profBody .container .comment .allComment .userPhoto {
+                width: 301px;
+            }
+
+                .profil .container .profContact .container .profBody .container .comment .allComment .userPhoto img {
+                    max-width: 40px;
+                    min-width:40px;
+                    max-height:40px;
+                    min-height:40px;
+                }
+
+            .profil .container .profContact .container .profBody .container .comment .allComment .user-comment {
+                width: 215px;
+                right: 60px;
+            }
+
+                .profil .container .profContact .container .profBody .container .comment .allComment .user-comment p {
+                    width: 294px;
+                    font-size: 16px;
+                }
+
+            .profil .container .profContact .container .profBody .container .comment .allComment .likeSay {
+                right: 10px;
+                bottom: -30px;
+            }
+}
+
+.list {
+    margin-top: 100px;
+}
+
+    .list .container {
+        margin: auto;
+        padding: 15px;
+        width: 100%;
+    }
+
+        .list .container h2 {
+            text-align: center;
+            padding: 8px;
+            color: #05466e;
+        }
+
+        .list .container .box {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-pack: start;
+            -ms-flex-pack: start;
+            justify-content: start;
+            -webkit-box-align: start;
+            -ms-flex-align: start;
+            align-items: start;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+        }
+
+            .list .container .box .card {
+                width: 250px;
+                padding-bottom: 8px;
+                margin: 15px 20px 15px 40px;
+                background-color: #05466e;
+            }
+
+                .list .container .box .card h4 {
+                    color: #fff;
+                    text-align: center;
+                    font-size: 18px;
+                }
+
+                .list .container .box .card div {
+                    display: -webkit-box;
+                    display: -ms-flexbox;
+                    display: flex;
+                    -webkit-box-orient: vertical;
+                    -webkit-box-direction: normal;
+                    -ms-flex-direction: column;
+                    flex-direction: column;
+                }
+
+                    .list .container .box .card div img {
+                        margin: auto;
+                        padding: 8px;
+                        width: 100%;
+                        height: 240px;
+                    }
+
+                    .list .container .box .card div .teklif {
+                        width: 100%;
+                        padding-top: 10px;
+                        display: -webkit-box;
+                        display: -ms-flexbox;
+                        display: flex;
+                        -webkit-box-align: center;
+                        -ms-flex-align: center;
+                        align-items: center;
+                        -webkit-box-orient: vertical;
+                        -webkit-box-direction: normal;
+                        -ms-flex-direction: column;
+                        flex-direction: column;
+                    }
+
+                        .list .container .box .card div .teklif button {
+                            width: 80%;
+                            background-color: #ffff;
+                            color: #05466e;
+                            -webkit-transition: .3s;
+                            transition: .3s;
+                            font-size: 14px;
+                            font-weight: 500;
+                        }
+
+@media (max-width: 768px) {
+    .list .container .box {
+        margin-left: 22px;
+    }
+}
+
+.news .container {
+    width: 30%;
+    margin: 140px auto;
+    padding-bottom: 20px;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #13317F;
+}
+
+    .news .container h3 {
+        padding: 15px;
+        text-align: center;
+        color: #05466e;
+    }
+
+    .news .container form {
+        margin: auto;
+        width: 80%;
+    }
+
+        .news .container form button {
+            width: 100% !important;
+        }
+
+        .news .container form textarea {
+            height: 130px;
+        }
+
+    .news .container p {
+        margin: 15px 0px 0px 50px;
+        color: red;
+    }
+
+@media (max-width: 768px) {
+    .news .container {
+        margin: 90px auto;
+        width: 90%;
+    }
+
+    .news .slayd {
+        margin: 200px auto;
+    }
+}
+
+.paylasim .forget {
+    width: 30%;
+    margin: 140px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #13317F;
+    height: 200px;
+}
+
+    .paylasim .forget h3 {
+        padding: 15px;
+        text-align: center;
+        color: #05466e;
+    }
+
+    .paylasim .forget form {
+        margin: auto;
+        width: 80%;
+    }
+
+        .paylasim .forget form button {
+            width: 100%;
+        }
+
+        .paylasim .forget form textarea {
+            height: 130px;
+        }
+
+    .paylasim .forget p {
+        margin: 15px 0px 0px 50px;
+        color: red;
+    }
+
+.paylasim .kod {
+    height: 200px;
+    width: 30%;
+    margin: 140px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #13317F;
+}
+
+    .paylasim .kod h3 {
+        padding: 15px;
+        text-align: center;
+        color: #05466e;
+    }
+
+    .paylasim .kod form {
+        margin: auto;
+        width: 80%;
+    }
+
+        .paylasim .kod form button {
+            width: 100%;
+        }
+
+        .paylasim .kod form textarea {
+            height: 130px;
+        }
+
+    .paylasim .kod p {
+        margin: 15px 0px 0px 50px;
+        color: red;
+    }
+
+.paylasim .yeniShifre {
+    height: 300px;
+    width: 30%;
+    margin: 140px auto;
+    background-color: #fff;
+    border-radius: 12px;
+    border: 1px solid #13317F;
+}
+
+    .paylasim .yeniShifre h3 {
+        padding: 15px;
+        text-align: center;
+        color: #05466e;
+    }
+
+    .paylasim .yeniShifre form {
+        margin: auto;
+        width: 80%;
+    }
+
+        .paylasim .yeniShifre form button {
+            width: 100%;
+        }
+
+        .paylasim .yeniShifre form textarea {
+            height: 130px;
+        }
+
+    .paylasim .yeniShifre p {
+        margin: 15px 0px 0px 50px;
+        color: red;
+    }
+
+.paylasim .slayd {
+    height: 250px;
+}
+
+@media (max-width: 768px) {
+    .forget {
+        width: 80% !important;
+    }
+
+    .kod {
+        width: 80% !important;
+    }
+
+    .yeniShifre {
+        width: 80% !important;
+    }
+}
+
+footer {
+    height: 200px;
+    background-color: #15567f !important;
+    z-index: 10000;
+    position: relative;
+    color: #fff !important;
+}
+
+.footer-basic {
+    padding: 40px 0;
+    color: #fff !important;
+}
+
+    .footer-basic .copyright {
+        margin-top: 15px;
+        text-align: center;
+        font-size: 13px;
+        margin-bottom: 0;
+    }
+
+        .footer-basic .copyright span {
+            font-weight: bold;
+        }
+
+    .footer-basic .social > a {
+        font-size: 24px;
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        display: inline-block;
+        text-align: center;
+        margin: 0 8px;
+    }
+
+    .footer-basic .social {
+        text-align: center;
+        padding-bottom: 25px;
+    }
+
+        .footer-basic .social i {
+            color: #fff;
+            -webkit-transition: .3s;
+            transition: .3s;
+        }
+
+            .footer-basic .social i:hover {
+                color: #98FF98;
+            }
+
+    .footer-basic ul {
+        padding: 0;
+        list-style: none;
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.6;
+        margin-bottom: 0;
+    }
+
+        .footer-basic ul li {
+            padding: 0 10px;
+        }
+
+            .footer-basic ul li a {
+                color: #fff !important;
+                text-decoration: none;
+                font-family: 'Luxurious Roman', cursive;
+                font-size: 18px;
+                -webkit-transition: .3s;
+                transition: .3s;
+            }
+
+                .footer-basic ul li a:hover {
+                    color: #98FF98 !important;
+                }
+
+@media (max-width: 768px) {
+    footer .list-inline li a {
+        font-size: 13px;
+    }
+}
+/*# sourceMappingURL=style.css.map */
+
+.catmenu{
+    margin-top:78px;
+}
+.news .container form .photoarea {
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid silver;
+    margin-top: 13px;
+}
+
+    .news .container form .photoarea .item {
+        width: 31%;
+        margin: 5px 1%;
+        position: relative;
+        border: 1px solid red;
+    }
+    .profContact .profilphotoarea{
+        width:90%;
+        display: flex;
+        /*flex-wrap: wrap;*/
+        border-radius: 4px;
+        margin-top: 15px!important;
+        background-color:#fff;
+    }
+        .profContact .profilphotoarea .item {
+            width: 50%;
+            margin: 5px 1%;
+            position: relative;
+            border: 1px solid red;
+            cursor:pointer;
+        }
+         .profContact .profilphotoarea .item  img{
+            width: 100%;
+            min-height: 70px;
+            max-height: 70px;
+        }
+        .news .container form .photoarea .item::after {
+            opacity: 0;
+            content: 'Sil';
+            width: 100%;
+            height: 100px;
+            background-color: rgba(0,0,0,.4);
+            position: absolute;
+            left: 0;
+            top: 0;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            color: #fff;
+            cursor: pointer;
+            font-size: 20px;
+            transition: .5s;
+        }
+
+        .news .container form .photoarea .item input {
+            display: none;
+        }
+
+        .news .container form .photoarea .item:hover::after {
+            opacity: 1;
+        }
+
+        .news .container form .photoarea .item img {
+            width: 100%;
+            min-height: 100px;
+            max-height: 100px;
+        }
+
+        .searchfriend form{
+            width:300px;
+        }
+        .searchinputdata {
+            position: absolute!important;
+            width: 235px!important;
+            top: 46px!important;
+            background-color: #fff;
+            z-index: 999;
+            border-radius:0.25rem;
+        }
+
+        .searchinputdata .searchphoto img {
+            width:30%;
+            height:55px;
+            border-radius:50%;
+        }
+        .searchinputdata .searchphoto a{
+            text-decoration:none;
+            color:black;
+        }

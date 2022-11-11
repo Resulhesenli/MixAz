@@ -1,0 +1,63 @@
+﻿      @model User
+    <section class="resProfil ">
+            <div class="container">
+                <div class="profImg">
+                    <img src="/img/@Model.UserProfilePhotoUrl" id="profilephoto">
+                    <h4>@Model.UserName @Model.UserSurname</h4>
+                    <a href="/home/melumatlarim"> 
+                        <button class="btn mb-3"><i class="fas fa-pen pe-2"></i>Redactə et</button>
+                    </a>
+                     <div class="share mb-2">
+                         <a href="/home/profil"><i class="fas fa-newspaper pe-2"></i>Xəbərlər</a>
+                         <a href="#" class="ps-3">0</a>
+                     </div>
+                     <div class="friends mb-2">
+                        <a href="istekler.html" class=""><i class="fas fa-user-plus pe-2"></i>İstəklər</a>
+                        <a href="istekler.html">78</a>
+                     </div>
+                     <div class="friends mb-2">
+                      <a href="dostlar.html" class=""><i class="fas fa-user-friends pe-2"></i> Dostlar</a>
+                      <a href="dostlar.html">2k</a>
+                   </div>
+                </div>
+
+                <div class="profContact">
+                    <div class="container">
+                      <div class=" melumatlarim">
+                        <div class="container mb-3 ">
+                            <div class="myInfo">
+                            <h3>Şifrəni dəyiş</h3>
+                            <form asp-action ="UpdatePass" asp-controller="Home" asp-route-id="@Model.UserId" method="post" >
+                                <div asp-validation-summary=All></div>  
+                                <label for="">Köhnə şifrə</label>
+                                <input type="password" class="form-control mb-3" id="UserPassword" name="oldpass" autocomplete="off" />
+                                <label for="">Yeni şifrə</label>
+                                <input type="password" class="form-control mb-3" id="UserPassword" name="newpass" autocomplete="off" />
+                                <label for="">Təkrar</label>
+                                <input type="password" class="form-control mb-3" id="UserPassword" name="replacepass" autocomplete="off" />
+                                <button class="btn btn-success">Dəyiş</button>
+                             </form>
+                            </div>
+                        </div>
+                      @*  <div class="shifre">
+                            <div class="container">
+                                    <h3>Şifrəni dəyiş</h3>
+                                    <form action ="" method="post" >
+                                        <label for="">Köhnə şifrə</label>
+                                        <input type="text" class="form-control mb-3" name="Ad" autocomplete="off" />
+                                        <label for="">Yeni şifrə</label>
+                                        <input type="text" class="form-control mb-3" name="Ad" autocomplete="off" />
+                                        <label for="">Təkrar</label>
+                                        <input type="text" class="form-control mb-3" name="Ad" autocomplete="off" />
+                                        <button class="btn btn-success">Dəyiş</button>
+                                    </form>
+                                </div>
+                            </div>*@
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      @await Html.PartialAsync("_footer")

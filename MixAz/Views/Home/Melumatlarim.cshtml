@@ -1,0 +1,46 @@
+﻿      @model User 
+    <section class="resProfil ">
+            <div class="container">
+                <div class="profImg infomenu">
+                    <img src="/img/@Model.UserProfilePhotoUrl" id="profilephoto">
+                    <h4>@Model.UserName @Model.UserSurname</h4>
+                    <button class="btn mb-3"><i class="fas fa-pen pe-2"></i>Redactə et</button>
+                    <div class="share mb-2">
+                                <a href="/home/profil"><i class="fas fa-newspaper pe-2"></i>Xəbərlər</a>
+                                <a href="#" class="ps-3">@Model.Posts.Count()</a>
+                            </div>
+                           <div class="friends mb-2">
+                                <a href="/Home/istekler" class=""><i class="fas fa-user-plus pe-2"></i>İstəklər</a>
+                                <a href="/Home/istekler" class="ps-3">0</a>
+                            </div>
+                </div>
+
+                <div class="profContact">
+                    <div class="container">
+                      <div class=" melumatlarim">
+                        <div class="container mb-3 ">
+                            <div class="myInfo">
+                            <h3>Məlumatlarım</h3>
+                            <form asp-action="UpdateMelumatlarim" asp-controller="Home" method="post" enctype="multipart/form-data">
+                                <div asp-validation-summary="All" class="text-danger"></div>
+                                <label for="">Ad</label>
+                                <input type="text" class="form-control mb-3" autocomplete="off" asp-for="UserName" />
+                                <label for="">Soyad</label>
+                                <input type="text" class="form-control mb-3" autocomplete="off" asp-for="UserSurname" />
+                                <label for="">mail</label>
+                                <input type="mail" class="form-control mb-3" autocomplete="off" asp-for="UserMail" />
+                                <label for="">Şəkil</label>
+                                <input type="file" class="form-control mb-3" autocomplete="off" name="UserPhoto" id="photoupload"/>
+                                <button class="btn btn-success">Dəyiş</button>
+                            </form>
+                            </div>
+                        </div>
+                     
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+     @await Html.PartialAsync("_footer")

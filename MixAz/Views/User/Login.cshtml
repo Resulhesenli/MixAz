@@ -1,0 +1,62 @@
+﻿    @model User
+      <section class="registration">
+          <div class="container">
+            <div class="citephoto">
+                <div class="sayt">
+                    <img src="/img/sayt.png" width="430px" height="400px" class="citeimg">
+                </div>
+                <div class="telefon">
+                    <img src="/img/nout.png" width="600px" height="450px" >
+                </div>
+                <div class="saytIki">
+                    <img src="/img/ressayt.png" width="198px" height="410px" class="citeimg">
+                </div>
+                <div class="telefonIki">
+                    <img src="/img/phone-1682317_1280.webp" width="300px" > 
+                </div>
+            </div>
+          </div>
+      </section> 
+
+     <section id="enter">
+      <div class="container">
+        <form class="giris" asp-action="Login" asp-controller="User" method="post">
+          <h4 class="text-center">Giriş</h4>
+          <div class="user"><i class="fas fa-user"></i></div>
+          <input class="form-control" type="text"  id="name" placeholder="Login" autocomplete="off" asp-for="UserNickName">
+          <span asp-validation-for="UserNickName"class="text-danger"></span>
+          <div class="password"><i class="fas fa-lock"></i></div>
+          <input class="form-control" type="password"  id="password" placeholder="Şifrə" autocomplete="off" asp-for="UserPassword">
+          <span asp-validation-for="UserPassword"class="text-danger"></span>
+          <i class="fas fa-eye " id = "aciqEnter"></i>
+          <i class="fas fa-eye-slash" id = "bagliEnter"></i>
+          <a href="/Home/forget">Şifrənizi unutmusuz?</a>
+          <button  id="esasSehife" class="mt-3">Daxil ol</button>
+          <p>Şəxsi hesabiniz yoxdur? <a href="/User/Registr">Qeydiyyatdan keçin </a></p>
+        </form>
+      </div>
+  </section> 
+
+         <footer class="footer-basic">
+   
+            <div class="social">
+              <a href="#"><i class="fab fa-instagram"></i></a>
+              <a href="#"><i class="fab fa-facebook"></i></a>
+              <a href="#"><i class="fab fa-twitter"></i></a>
+              <a href="#"><i class="fas fa-envelope"></i></a>
+              <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Əsas xəbərlər</a></li>
+                <li class="list-inline-item"><a href="#">Son xəbərlər</a></li>
+                <li class="list-inline-item"><a href="#">Siyasət</a></li>
+                <li class="list-inline-item"><a href="#">İqtisadiyyat</a></li>
+                <li class="list-inline-item"><a href="#">İdman</a></li>
+                <li class="list-inline-item"><a href="#">Mədəniyyət</a></li>
+                <li class="list-inline-item"><a href="#">Dünya</a></li>
+                <li class="list-inline-item"><a href="#">Şou-Biznes</a></li>
+            </ul>
+            <p class="copyright">Site by <i class="fas fa-heart text-danger"></i> <span>Resul Hesenli</span> © 2022</p>
+        
+      </footer>
+

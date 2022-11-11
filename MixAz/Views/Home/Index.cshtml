@@ -1,0 +1,78 @@
+﻿   
+    @{
+        Layout = "_Layout1";
+    }
+
+   @model List<Post>
+    <!-- sidebar hissəsi,sağ hissədə oxşar xəbərlər -->
+    <div class="sidebar text-center">
+      <h4 class=" text-center">Ən çox baxılan</h4>
+      @foreach (Post item in ViewBag.MaxView)
+     {
+          <div class="same mb-2">
+              <a href="/Home/Xeber/@item.PostId" target="_blank">
+                <img src="/img/@item.Photos.ToList()[0].PhotoUrl" alt="">
+              </a>
+            <div class="boxText">
+              <h6>@item.PostCategory.CategoryName</h6>
+              <a href="/Home/Xeber/@item.PostId" target="_blank">
+                 <p> @item.PostName</p>
+              </a>
+            </div>
+          </div>
+     }
+
+
+
+      </div> 
+      <!-- content,xəbərlər hissəsi  -->
+      <section class="xeberler">
+        <div class="container">
+          <div class="slide">
+            <div id="carouselExampleIndicators" class="carousel slide caruselSlide" data-bs-ride="carousel">
+              <div class="carousel-indicators sira d-none">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active " aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4" class=""></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5" class=""></button>
+              </div>
+              
+              <div class="carousel-inner">
+                    @foreach (Post slide in ViewBag.Slide)
+                   {
+                      <div class="carousel-item">
+                        <a href="/Home/Xeber/@slide.PostId" target="_blank">
+                            <img src="/img/@slide.Photos.ToList()[0].PhotoUrl" class="d-block w-100 sld" alt="..." height="400">
+                        </a>
+                          <div class="slideYazi">
+                            <a href="/Home/Xeber/@slide.PostId" target="_blank">
+                                <h4>@slide.PostName</h4>
+                            </a>
+                          </div>
+                     </div>  
+                   }
+
+              </div>
+              <button class="carousel-control-prev ireli " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon mb-5" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next ireli  " type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon mb-5" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+          </div>
+          <div class="box">
+            
+
+               @foreach (var item in Model)
+              {
+              
+                @await Html.PartialAsync("_card",item)
+              }
+          </div>
+        </div>
+        </div>
+    </section> 
+    

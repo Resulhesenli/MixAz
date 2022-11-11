@@ -1,0 +1,47 @@
+﻿@model User
+
+            <section class="registration">
+              <div class="container">
+                <div class="citephoto">
+                    <div class="sayt">
+                        <img src="/img/sayt.png" width="430px" height="400px" class="citeimg">
+                    </div>
+                    <div class="telefon">
+                        <img src="/img/nout.png" width="600px" height="450px" >
+                    </div>
+                    <div class="saytIki">
+                        <img src="/img/ressayt.png" width="198px" height="410px" class="citeimg">
+                    </div>
+                    <div class="telefonIki">
+                        <img src="/img/phone-1682317_1280.webp" width="300px" >
+                    </div>
+                </div>
+              </div>
+          </section>     
+
+            <section id="registr" class="container d-block">
+                <div class="container">
+                  <form class="qeyd"  asp-action="moderator" asp-controller="User">
+                      <div asp-validation-summary="ModelOnly"></div>
+                      <h4 class="text-center">Moderator əlavə et</h4>
+                        <input class="form-control" id="name" placeholder="Ad" asp-for="UserName" autocomplete="off">
+                        <span asp-validation-for="UserName"class="text-danger"></span>
+                        <input class="form-control" id="surname" placeholder="Soyad" asp-for="UserSurname" autocomplete="off">
+                        <span asp-validation-for="UserSurname"class="text-danger"></span>
+                         <select class="form-control" asp-for="UserGenderId" asp-items="ViewBag.Genders">
+                            <option value="">Cins</option>
+                        </select>
+                        <input class="form-control" type="email"  id="mail" placeholder="Email" asp-for="UserMail" autocomplete="off">
+                        <span asp-validation-for="UserMail"class="text-danger"></span>
+                        <input class="form-control"  id="log" placeholder="Login" asp-for="UserNickName" autocomplete="off">
+                        <span asp-validation-for="UserNickName"class="text-danger"></span>
+                        <input class="form-control" type="password"  id="parol" placeholder="Şifrə" asp-for="UserPassword" autocomplete="off">
+                        <span asp-validation-for="UserPassword"class="text-danger"></span>
+                      @*  <i class="fas fa-eye " id = "aciq"></i>
+                        <i class="fas fa-eye-slash" id = "bagli"></i>*@
+               
+                        <span asp-validation-for="UserGenderId" class="text-danger"></span>
+                        <button  id="esasSehife" class="mt-3"><i class="fas fa-plus pe-2"></i>Əlavə et</button>
+                    </form>
+                </div>
+            </section>

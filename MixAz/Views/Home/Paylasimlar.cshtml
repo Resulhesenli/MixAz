@@ -1,0 +1,26 @@
+﻿      @model Post
+    <section class="news">
+            <div class="container">
+                <h3>Xəbər paylaş</h3>
+                <form action ="/Home/paylasimlar" method="post" enctype="multipart/form-data">
+                    <input placeholder="Xəbər başlığı" class="form-control" asp-for="PostName"  autocomplete="off" />
+                    <span asp-validation-for="PostName"class="text-danger mt-1 ms-1"></span>
+                    <input type="file"  class="form-control mb-1" name="PostPhotoUrl" id="MixPhotoSelect"/>
+                    <div class="photoarea">
+                        @*<div class="item">
+                            <img src="~/img/12xxjvox.jpg">
+                            <input type="file"  class="form-control mb-1" name="MixPhoto"/>
+                        </div>*@
+                    </div>
+                    <select class='form-control mb-3 mt-3' name="PostCategoryId" asp-for="PostCategoryId" asp-items="ViewBag.Category">
+                        <option value="">Kateqoriya</option>
+                     </select>
+                    <textarea placeholder="Xəbər haqqında" class="form-control mb-1 mt-3" asp-for="PostDescription"></textarea>
+                    <span asp-validation-for="PostDescription"class="text-danger"></span>
+                    <button class="btn btn-success mt-1">Paylaş</button>
+                 </form>
+                 <p>Paylaşılan xəbərlər admin tərəfindən baxılaraq təstiqləndikdən sonra əsas səhifədə paylaşılır </p>
+            </div>
+        </section>
+
+        @await Html.PartialAsync("_footer")

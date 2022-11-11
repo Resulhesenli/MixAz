@@ -1,0 +1,155 @@
+﻿
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mix.az</title>
+    <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/Css/StyleSheet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Luxurious+Roman&family=Roboto+Mono:ital,wght@1,300&family=Rubik&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    </head>
+<body>
+      <header>
+      <nav class="navbar navbar-expand-sm navbar-dark esas-nav">
+        <div class="container">
+          <a class="navbar-brand logo" href="/">Mix.az</a>
+          <div class="axtaris"> 
+            <form class="d-flex">
+              <input class="form-control me-2 pe-5" type="search" placeholder="Axtarış">
+              <button class="btn text-light" type="button"><i class="fas fa-search "></i></button>
+            </form>
+         </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
+            <span class="navbar-toggler-icon resBars"></span>
+          </button>
+          <div class="collapse navbar-collapse ps-5 " id="mynavbar">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/"><i class="fas fa-home text-white pe-2"></i>Ana səhifə</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="/home/paylasimlar"><i class="fas fa-plus-circle text-white pe-2"></i>Xəbər paylaş</a>
+              </li>
+                @if (User.Identity.IsAuthenticated && User.FindFirst(System.Security.Claims.ClaimTypes.Role).Value == "Admin" || User.Identity.IsAuthenticated && User.FindFirst(System.Security.Claims.ClaimTypes.Role).Value == "Moderator")
+                { 
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="/Admin/admin"><i class="fas fa-newspaper text-white pe-2"></i>Xəbərlər</a>
+                    </li>
+                }
+                @if (User.Identity.IsAuthenticated && User.FindFirst(System.Security.Claims.ClaimTypes.Role).Value=="Admin"){
+                  <li class="nav-item">
+                    <a class="nav-link text-white" href="/User/Moderator">Admin</a>
+                  </li>
+                }
+              <li class="nav-item kate">
+                <a class="nav-link text-white" href="javascript:void(0)"><i class="fas fa-align-justify text-white pe-2"></i>Kateqoriya</a>
+              </li>
+            </ul>
+            <div class="search searchfriend">
+              <form class="d-flex">
+                    <input class="form-control me-2 pe-5" type="text" placeholder="Axtarış">
+                    <button class="btn text-light" type="button"><i class="fas fa-search"></i></button> 
+                     <ul class="searchinputdata">
+                          @* <div class="searchphoto my-2">
+                               <img src="/img/Anonim.png" />
+                                <a href="/home/profil?UserNickName=${this.userNickName}" class="my-2">Famil999</a>
+                            </div>*@
+                     </ul>
+              </form>
+           </div>
+            
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <div class="login d-flex">
+                       @await Component.InvokeAsync("UserCard")
+                      <i class="fas fa-bars" onclick="profmenu()"></i>
+                    </div>
+                }
+                else
+                {
+                    <ul class="navbar-nav">
+                      <li class="nav-item giris">
+                        <a class="nav-link text-white" href="/user/login"><i class="fas fa-user text-white pe-2"></i>Daxil ol</a>
+                      </li>
+                    </ul>
+                }
+
+            <div class="profMenu">
+              <a href="/home/shifre/@User.Claims.SingleOrDefault(x => x.Type == User.FindFirst("Id").Value)"><i class="fas fa-key pe-2"></i>Şifrəni dəyiş</a>
+              <a  href="/User/LogOut"><i class="fas fa-sign-out pe-2"></i>Çıxış</a>
+            </div>
+          </div>
+        </div>
+        
+      </nav>
+
+       
+
+      <!--responsive panel -->
+      <section class="resNav pt-3">
+      <div class="container">
+        @if (User.Identity.IsAuthenticated)
+                {
+        <div class="resProfil pt-3">
+          @await Component.InvokeAsync("Resnav")
+        </div>
+                }
+        <div class="resPanel pb-5">
+          <ul>
+            <li>
+              <a href="/">Ana Səhifə</a>
+            </li>
+            <li>
+              <a href="/home/paylasimlar">Xəbər paylaş</a>
+            </li>
+             @if (User.Identity.IsAuthenticated && User.FindFirst(System.Security.Claims.ClaimTypes.Role).Value == "Admin" || User.Identity.IsAuthenticated && User.FindFirst(System.Security.Claims.ClaimTypes.Role).Value == "Moderator")
+                { 
+                    <li>
+                        <a href="/admin/admin">Xəbərlər</a>
+                    </li>
+                }
+                @if (User.Identity.IsAuthenticated && User.FindFirst(System.Security.Claims.ClaimTypes.Role).Value=="Admin"){
+                  <li>
+                    <a href="/User/Moderator">Admin</a>
+                  </li>
+                }
+          </ul>
+        </div>
+        @if (!User.Identity.IsAuthenticated)
+         {
+        <div class="cixis mt-5">
+            <a href="/user/registr"><i class="fas fa-user-plus pe-2"></i>Qeydiyyatdan keç</a>
+            <a href="/user/login"><i class="fas fa-door-closed pe-2"></i>Daxil ol</a>
+        </div>
+        }
+        @if (User.Identity.IsAuthenticated)
+                {
+        <div class="cixis notcategory pt-5">
+          <a href="/home/shifre/@User.Claims.SingleOrDefault(x => x.Type == User.FindFirst("Id").Value)"><i class="fas fa-key pe-2"></i>Şifrəni dəyiş</a>
+          <a href="/User/LogOut"><i class="fas fa-sign-out pe-2"></i>Çıxış</a>
+      </div>
+                }
+      </div>
+    </section>
+    </header>
+      
+        @RenderBody()
+         <script src="/js/index.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/3.2.11/jquery.validate.unobtrusive.min.js"></script>
+</body>
+</html>

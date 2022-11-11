@@ -1,0 +1,120 @@
+﻿     @model Post
+    <section class="xeber">
+          <div class="container">
+        <div class="xeberImg">            
+             <img src="/img/@Model.Photos.ToList()[0].PhotoUrl" class="first" id="esasImg">
+                @if(@Model.Photos.Count > 1)
+                {
+                    <div class="postImg" id="imagesmall">
+                         @foreach (var item in Model.Photos)
+                            {
+                                 <img src="/img/small/@item.PhotoUrl" class="img second">
+                            }
+                     </div>
+                }
+                <div class="postText">
+                    <h2>@Model.PostName</h2>
+                    <p>@Model.PostDescription</p>
+                </div>
+                <div class="beyenme">
+                  <div class="solHisse">
+                    @if (User.Identity.IsAuthenticated)
+                {
+                    <a class="btn btn-light LikeNumber" LikePostId="@Model.PostId"><i class="@(Model.Likes.Where(x=>x.IsLike==true && x.LikeUserId == int.Parse(User.FindFirst("Id").Value)).Count()>0 ? "fa-solid fa-heart text-danger" : "far fa-heart") pe-1"></i><span>@Model.Likes.Where(x=>x.IsLike==true).Count()</span></a> 
+                }else{
+                    <a class="btn btn-light LikeNumber " href="/User/Login"><i class=" far fa-heart pe-1"></i><span>@Model.Likes.Where(x=>x.IsLike==true).Count()</span></a>
+                }
+                    <a><i class="far fa-comment pe-1"></i>@Model.Sherhs.Count()</a> 
+                  </div>
+                  <div class="sagHisse">
+                    <a><i class="fas fa-eye pe-1"></i>@Model.PostViewCount</a> 
+                  </div>
+                </div>
+                
+                <div class="comment">
+                      <div class="myComment d-flex">
+                        @if (User.Identity.IsAuthenticated)
+                        {
+                            <img src="/img/@User.Claims.SingleOrDefault(x => x.Type == System.Security.Claims.ClaimTypes.Uri).Value" class="myimg">
+                            <form action="/Home/AddComment/@Model.PostId" method="post" enctype="multipart/form-data" id="formComment">
+                                <input placeholder="Şərh bildir..." name="SherhDescription" class="form-control" autocomplete="off">
+                                <button type="Submit">
+                                    <i class="fas fa-chevron-circle-right send"></i>
+                                </button>
+                            </form>
+                        }else{
+                            <img src="/img/Anonim.png" class="myimg"> 
+                            <form action="/User/Login" >
+                                <input placeholder="Şərh bildir..." name="SherhDescription" class="form-control" autocomplete="off">
+                                <button type="Submit">
+                                    <i class="fas fa-chevron-circle-right send"></i>
+                                </button>
+                            </form>
+                        }
+                      </div>
+                    @foreach (Sherh sherh in ViewBag.Sherhs)
+                    { 
+                        <div class="allComment mt-3">
+                              <div class="userComment">
+                                <div class="userPhoto">
+                                     @if (User.Identity.IsAuthenticated){
+                                        <a href="/Home/Profil/@sherh.SherhUser?UserNickName=@sherh.SherhUser.UserNickName">
+                                            <img src="/img/@sherh.SherhUser.UserProfilePhotoUrl" class="userimg">
+                                        </a>
+                                     }else{
+                                           <a href="/User/Login">
+                                                <img src="/img/@sherh.SherhUser.UserProfilePhotoUrl" class="userimg">
+                                           </a>
+                                     }
+                                </div>
+                                <div class="user-comment">
+                                    @if (User.Identity.IsAuthenticated)
+                                    { 
+                                        <a href="/Home/Profil/@sherh.SherhUser?UserNickName=@sherh.SherhUser.UserNickName">
+                                            <h6>@sherh.SherhUser.UserName @sherh.SherhUser.UserSurname</h6>
+                                         </a>
+                                        <p>@sherh.SherhDescription</p>
+                                    }else{
+                                        <a href="/User/Login">
+                                            <h6>@sherh.SherhUser.UserName @sherh.SherhUser.UserSurname</h6>
+                                         </a>
+                                        <p>@sherh.SherhDescription</p>
+                                    }
+                                </div>
+                                @if (User.Identity.IsAuthenticated)
+                                {
+                                    @if (@sherh.SherhUserId.ToString() == User.FindFirst("Id").Value || User.Identity.IsAuthenticated && User.FindFirst(System.Security.Claims.ClaimTypes.Role).Value=="Admin" || User.Identity.IsAuthenticated && User.FindFirst(System.Security.Claims.ClaimTypes.Role).Value=="Moderator")
+                                    {
+                                        <div class="del" sherhid="@sherh.SherhId"><a><i class="fas fa-times"></i></a></div>
+                                    }
+                                }
+                              </div>                   
+                          </div>
+                    }
+                      
+                      
+                  </div>
+                </div>
+            </div>
+          </div>
+      </section> 
+
+     <div class="sidebar text-center">
+        <h4 class=" text-center">Oxşar Xəbərlər</h4>
+        @foreach (Post item in ViewBag.same)
+           {
+           
+            <div class="same mb-2">
+                <a href="/Home/Xeber/@item.PostId"> 
+                    <img src="/img/@item.Photos.ToList()[0].PhotoUrl" alt="">
+                </a>
+              <div class="boxText">
+                <a href="/Home/Xeber/@item.PostId"> @item.PostName</a>
+              </div>
+            </div>
+           }
+  
+  
+        </div>
+
+     @await Html.PartialAsync("_footer")

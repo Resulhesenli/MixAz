@@ -1,0 +1,30 @@
+﻿
+        @model Post
+        <section class="news">
+            <div class="container">
+                <h3>Xəbər paylaş</h3>
+                <form asp-action="UpdatePost" asp-controller="Admin" asp-route-id="@Model.PostId" method="post" enctype="multipart/form-data">
+                    <input  placeholder="Xəbər başlığı" class="form-control mb-3" asp-for="PostName" autocomplete="off" />
+                     <span asp-validation-for="PostName"class="text-danger"></span>
+                       <select class='form-control mb-3' name='PostCategoryId' asp-for="PostCategoryId" asp-items="ViewBag.Category">
+                        
+                        </select>
+                        <input type="file"  class="form-control mb-1" name="MixPhoto" id="MixPhotoSelect"/>
+                        <div class="photoarea">
+                    @foreach(var item in Model.Photos)
+                    {
+                        <div class="item" attrid="@item.PhotoId">
+                                <img src="~/img/@item.PhotoUrl">
+                            </div>
+                    }
+                    </div>
+                    <textarea placeholder="Xəbər haqqında" class="form-control mb-3" asp-for="PostDescription"></textarea>
+                     <span asp-validation-for="PostDescription"class="text-danger"></span>
+                    <button class="btn btn-success">Yenilə</button>
+                 </form>
+            </div>
+        </section>
+
+        @await Html.PartialAsync("_footer")
+
+        
