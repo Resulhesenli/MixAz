@@ -1247,8 +1247,7 @@ header {
                     padding: 3px;
                 }
                .profil .container .profContact .container .bodyText #esasImg{
-                   max-width:560px;
-                   min-width:560px;
+                   width:100%;
                }
 
                 .profil .container .profContact .container .bodyText .postImg .img {
@@ -1704,12 +1703,13 @@ header {
                         margin: 0px 10px 8px 0px;
                     }
                     .profil .container .profContact .container .comment form{
+                        width:100%;
                         margin-top:6px;
                     }
 
                     .profil .container .profContact .container .comment input {
                         border: 2px solid #d3d9de;
-                        width: 498px;
+                        width: 88%;
                         border-radius: 8px;
                         padding: 5px 0px 5px 15px;
                         outline: none;
@@ -1760,7 +1760,7 @@ header {
                         }
 
                         .profil .container .profContact .container .allComment .userComment .user-comment {
-                            width: 490px;
+                            width: 82%;
                             border-radius: 20px;
                             position: relative;
                             right: 50px;
